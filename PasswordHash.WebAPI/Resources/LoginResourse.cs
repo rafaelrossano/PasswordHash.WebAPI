@@ -1,6 +1,4 @@
 ﻿namespace PasswordHash.WebAPI.Resources
 {
-    public class LoginResourse
-    {
-    }
+    public sealed record LoginResourse(string Username, string Password);
 }
