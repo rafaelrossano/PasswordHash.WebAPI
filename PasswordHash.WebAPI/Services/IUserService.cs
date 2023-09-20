@@ -1,6 +1,10 @@
-﻿namespace PasswordHash.WebAPI.Services
+﻿using PasswordHash.WebAPI.Resources;
+
+namespace PasswordHash.WebAPI.Services
 {
-    public class IUserService
+    public interface IUserService
     {
+        Task<UserResource> Register(RegisterResource resource, CancellationToken cancellationToken);
+        Task<UserResource> Login(LoginResource resource, CancellationToken cancellationToken);
     }
 }
